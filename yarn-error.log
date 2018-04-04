@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/scottrowell/.nvm/versions/node/v7.2.0/bin/node /Users/scottrowell/.nvm/versions/node/v7.2.0/bin/yarn lint
+  /Users/scottrowell/.nvm/versions/node/v7.2.0/bin/node /Users/scottrowell/.nvm/versions/node/v7.2.0/bin/yarn watch
 
 PATH: 
   /Users/scottrowell/.nvm/versions/node/v7.2.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:/Library/Frameworks/Mono.framework/Versions/Current/Commands
@@ -17,8 +17,10 @@ npm manifest:
   {
     "scripts": {
       "api": "node ratingsAPI.js",
+      "build": "webpack",
       "format": "prettier --write --single-quote --print-width=120 --parser=flow --tab-width=2 \"js/**/*.{js,jsx}\"",
-      "lint": "eslint */*.{js,jsx} --quiet"        
+      "lint": "eslint */*.{js,jsx} --quiet",
+      "watch": "webpack --watch"        
     },
     "dependencies": {
       "axios": "0.16.1",
@@ -5739,7 +5741,7 @@ Trace:
   Error: Command failed.
   Exit code: 1
   Command: sh
-  Arguments: -c eslint */*.{js,jsx} --quiet
+  Arguments: -c webpack --watch
   Directory: /Users/scottrowell/Desktop/WebDev/complete-intro-to-react
   Output:
   
